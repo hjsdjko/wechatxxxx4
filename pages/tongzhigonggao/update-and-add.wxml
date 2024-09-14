@@ -1,0 +1,42 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+    <view class="item-box">
+        <view class="item-label">标题</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.biaoti==true}}"  placeholder="标题" model:value="{{biaoti}}" />
+    </view>
+
+<view class="item-box"    bindtap="uploadfengmian">
+    <view   class="item-label">封面</view>
+    <image  src="{{fengmianPath?fengmianPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+    <com-edit></com-edit>
+    <view class="item-box"  >
+        <view class="item-label">发布时间</view>
+        <view class="down-item-picker"  bindtap="onfabushijianTap">
+            <view class="down-item-picker-text">         {{fabushijian}}</view>
+        </view>
+    </view>
+    <com-date isShowPicker="{{showfabushijian}}" bind:dateHandler="fabushijianTap"></com-date>
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>

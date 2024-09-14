@@ -1,0 +1,86 @@
+.forgot-container {
+min-height
+:75vh;
+width
+:100%;
+padding
+:424rpx 44rpx 44rpx 44rpx;
+background
+:url(http://codegen.caihongy.cn/20230815/be5343490bf4412389da1378210fd727.jpg) no-repeat center top / 100%;
+height
+:100%;
+}
+
+.forgot-content {
+max-width: calc(100% - 23%);
+overflow: hidden;
+padding
+:24rpx 24rpx 24rpx 24rpx;
+box-shadow
+:0px 0px 12rpx #dddddd;
+border-radius
+:16rpx;
+background
+:#ffffff;
+display
+:block;
+width
+:100%;
+height
+:auto;
+}
+.box{
+width: 90%!important;
+    width
+:100%;
+    margin
+:0 0 24rpx 0;
+    height
+:auto;
+}
+input{
+border
+:2rpx solid #eeeeee;
+padding
+:0px 24rpx 0 24rpx;
+margin
+:0 0 0 0;
+color
+:#666666;
+border-radius
+:60rpx;
+background
+:#ffffff;
+width
+:100%;
+font-size
+:28rpx;
+height
+:88rpx;
+}
+
+
+
+.next-btn {
+    border
+:0px solid #eee;
+    padding
+:0 0 0 0;
+    margin
+:0 0 24rpx 0;
+    color
+:#ffffff;
+    border-radius
+:60rpx;
+    background
+:#75ebde;
+    width
+:100%;
+    line-height
+:88rpx;
+    font-size
+:32rpx;
+    height
+:88rpx;
+}
+

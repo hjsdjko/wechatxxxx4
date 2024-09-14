@@ -1,0 +1,107 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+    <view class="item-box">
+        <view class="item-label">企业账号</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qiyezhanghao==true}}"  placeholder="企业账号" model:value="{{qiyezhanghao}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">密码</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.mima==true}}"  placeholder="密码" model:value="{{mima}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">企业名称</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qiyemingcheng==true}}"  placeholder="企业名称" model:value="{{qiyemingcheng}}" />
+    </view>
+
+<view class="item-box"    bindtap="uploadqiyetupian">
+    <view   class="item-label">企业图片</view>
+    <image  src="{{qiyetupianPath?qiyetupianPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+    <view class="item-box">
+        <view class="item-label">联系电话</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.lianxidianhua==true}}"  placeholder="联系电话" model:value="{{lianxidianhua}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">企业地址</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qiyedizhi==true}}"  placeholder="企业地址" model:value="{{qiyedizhi}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">注册时间</view>
+        <picker   class="down-item-picker"    mode="date" value="{{zhuceshijian}}"  bindchange="zhuceshijianChange" >
+            <view class="down-item-picker-text">  {{zhuceshijian}}</view>
+        </picker>
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">员工数量</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yuangongshuliang==true}}"  placeholder="员工数量" model:value="{{yuangongshuliang}}" />
+    </view>
+
+<view class="item-box"  >
+    <view class="item-label">企业简介</view>
+
+    <textarea model:value="{{qiyejianjie}}" placeholder="企业简介"     data-info="{{qiyejianjie}}" maxlength="300" id="qiyejianjie"></textarea>
+</view>
+
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>

@@ -1,0 +1,104 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+    <view class="item-box">
+        <view class="item-label">员工账号</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yuangongzhanghao==true}}"  placeholder="员工账号" model:value="{{yuangongzhanghao}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">员工姓名</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yuangongxingming==true}}"  placeholder="员工姓名" model:value="{{yuangongxingming}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">性别</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.xingbie==true}}"  placeholder="性别" model:value="{{xingbie}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">部门</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.bumen==true}}"  placeholder="部门" model:value="{{bumen}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">岗位</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.gangwei==true}}"  placeholder="岗位" model:value="{{gangwei}}" />
+    </view>
+
+<view class="item-box"    bindtap="uploadtouxiang">
+    <view   class="item-label">头像</view>
+    <image  src="{{touxiangPath?touxiangPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+    <view class="item-box"  >
+        <view class="item-label">打卡时间</view>
+        <view class="down-item-picker"  bindtap="ondakashijianTap">
+            <view class="down-item-picker-text">         {{dakashijian}}</view>
+        </view>
+    </view>
+    <com-date isShowPicker="{{showdakashijian}}" bind:dateHandler="dakashijianTap"></com-date>
+<view class="item-box">
+    <view class="item-label" >打卡类型</view>
+    <picker   class="down-item-picker"     bindchange="dakaleixingChange" value="{{dakaleixingIndex}}"  range="{{dakaleixingList}}">
+                <view class="down-item-picker-text">
+                    {{dakaleixingIndex||dakaleixingIndex==0?dakaleixingList[dakaleixingIndex]:"请选择打卡类型"}}
+                </view>
+    </picker>
+</view>
+ <view class="item-box">
+     <view class="item-box" bind:tap="adressTap">
+         <view class="item-label">地址</view>
+         <input class="item-input" readonly placeholder="请选择地址" model:value="{{address}}"></input>
+     </view>
+ </view>
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button  wx:if="{{faceMatchFlag}}"    class="submit-btn" bindtap="submit">提交</button>
+         <button wx:if="{{!faceMatchFlag}}"   class="face-btn" bindtap="submit">人脸识别</button>
+     </view>
+
+
+    </view>
+
+</view>

@@ -1,0 +1,135 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+<view class="item-box">
+    <view class="item-label" >员工账号</view>
+    <picker   class="down-item-picker"     bindchange="yuangongzhanghaoChange" value="{{yuangongzhanghaoIndex}}"  range="{{yuangongzhanghaoList}}">
+                <view class="down-item-picker-text">
+                    {{yuangongzhanghaoIndex||yuangongzhanghaoIndex==0?yuangongzhanghaoList[yuangongzhanghaoIndex]:"请选择员工账号"}}
+                </view>
+    </picker>
+</view>
+    <view class="item-box">
+        <!-- 随 -->
+
+        <view class="item-label">员工姓名</view>
+        <input  class="item-input" type="text"   placeholder="员工姓名" model:value="{{yuangongxingming}}" />
+    </view>
+    <view class="item-box">
+        <!-- 随 -->
+
+        <view class="item-label">部门</view>
+        <input  class="item-input" type="text"   placeholder="部门" model:value="{{bumen}}" />
+    </view>
+    <view class="item-box">
+        <!-- 随 -->
+
+        <view class="item-label">岗位</view>
+        <input  class="item-input" type="text"   placeholder="岗位" model:value="{{gangwei}}" />
+    </view>
+    <view class="item-box">
+        <view class="item-label">出勤天数</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.chuqintianshu==true}}"  placeholder="出勤天数" model:value="{{chuqintianshu}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">请假天数</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qingjiatianshu==true}}"  placeholder="请假天数" model:value="{{qingjiatianshu}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">迟到天数</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.chidaotianshu==true}}"  placeholder="迟到天数" model:value="{{chidaotianshu}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">早退次数</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.zaotuicishu==true}}"  placeholder="早退次数" model:value="{{zaotuicishu}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">缺勤天数</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.queqintianshu==true}}"  placeholder="缺勤天数" model:value="{{queqintianshu}}" />
+    </view>
+
+    <view class="item-box"  >
+        <view class="item-label">统计时间</view>
+        <view class="down-item-picker"  bindtap="ontongjishijianTap">
+            <view class="down-item-picker-text">         {{tongjishijian}}</view>
+        </view>
+    </view>
+    <com-date isShowPicker="{{showtongjishijian}}" bind:dateHandler="tongjishijianTap"></com-date>
+    <view class="item-box">
+        <view class="item-label">企业账号</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qiyezhanghao==true}}"  placeholder="企业账号" model:value="{{qiyezhanghao}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">企业名称</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qiyemingcheng==true}}"  placeholder="企业名称" model:value="{{qiyemingcheng}}" />
+    </view>
+
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>

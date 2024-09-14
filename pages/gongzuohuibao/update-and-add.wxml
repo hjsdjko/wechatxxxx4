@@ -1,0 +1,122 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+    <view class="item-box">
+        <view class="item-label">员工账号</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yuangongzhanghao==true}}"  placeholder="员工账号" model:value="{{yuangongzhanghao}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">员工姓名</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yuangongxingming==true}}"  placeholder="员工姓名" model:value="{{yuangongxingming}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">部门</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.bumen==true}}"  placeholder="部门" model:value="{{bumen}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">岗位</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.gangwei==true}}"  placeholder="岗位" model:value="{{gangwei}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">企业账号</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qiyezhanghao==true}}"  placeholder="企业账号" model:value="{{qiyezhanghao}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">企业名称</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qiyemingcheng==true}}"  placeholder="企业名称" model:value="{{qiyemingcheng}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">汇报名称</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.huibaomingcheng==true}}"  placeholder="汇报名称" model:value="{{huibaomingcheng}}" />
+    </view>
+
+    <view class="item-box"  >
+        <view class="item-label">日期</view>
+        <view class="down-item-picker"  bindtap="onriqiTap">
+            <view class="down-item-picker-text">         {{riqi}}</view>
+        </view>
+    </view>
+    <com-date isShowPicker="{{showriqi}}" bind:dateHandler="riqiTap"></com-date>
+    <view class="item-box">
+        <view class="item-label">完成情况</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.wanchengqingkuang==true}}"  placeholder="完成情况" model:value="{{wanchengqingkuang}}" />
+    </view>
+
+    <com-edit></com-edit>
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>

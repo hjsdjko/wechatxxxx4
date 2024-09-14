@@ -1,0 +1,32 @@
+<view class="login-container">
+    <view wx:if="{{!faceShow}}" class="content">
+        <view class="avatar-box">
+            <image class='avatar' src="http://codegen.caihongy.cn/20201114/7856ba26477849ea828f481fa2773a95.jpg" mode="aspectFill"  />
+        </view>
+        <view class="box">
+            <input type="text" placeholder="请输入账号" model:value="{{username}}" />
+        </view>
+        <view class="box">
+            <input type="password" placeholder="请输入密码" model:value="{{password}}" />
+        </view>
+
+
+    <view class="item-box" wx:if="{{selectType.length>1}}">
+        <radio-group bindchange="userChange" class="item-radio-itemBox">
+            <view wx:for="{{selectType}}" wx:if="{{index!=0}}" wx:key="index" style="display: flex;margin-right: 20rpx;flex-wrap: wrap;">
+                <radio value="{{index}}" checked="{{index==loginType}}" color="#409eff"></radio>
+                <view wx:if="{{index==loginType}}" class="userType_three_textActive">{{item}}</view>
+                <view wx:else class="userType_three_text">{{ item }}</view>
+            </view>
+        </radio-group>
+    </view>
+
+        <button bindtap="login"      data-tablename="${table.tableName}"    class="login-btn">登陆</button>
+
+
+        <view class="box2">
+        </view>
+
+
+    </view>
+</view>

@@ -1,0 +1,117 @@
+<view class="register-container">
+<view class="content">
+<view class="userInfo-from">
+    <!-- yuangongzhanghao，普,去  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">员工账号</view>
+        <input  class="item-input" type="text"    disabled="true" placeholder="员工账号" model:value="{{yuangongzhanghao}}" />
+    </view>
+    <!-- yuangongxingming，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">员工姓名</view>
+        <input  class="item-input" type="text"    placeholder="员工姓名" model:value="{{yuangongxingming}}" />
+    </view>
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}" >
+        <view  class="item-label"   bindtap="touxiangTap"  >头像</view>
+        <image class="item-img"   bindtap="touxiangTap"   src="{{tempPathtouxiang}}" mode="aspectFill"></image>
+    </view>
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}">
+        <text   class="item-label"  >性别</text>
+        <picker   class="down-item-picker" mode="selector" range="{{xingbieList}}" value="{{xingbieIndex}}" bindchange="xingbieChange">
+            <view class="down-item-picker-text">{{xingbieList[xingbieIndex]}}</view>
+        </picker>
+    </view>
+    <!-- shoujihaoma，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">手机号码</view>
+        <input  class="item-input" type="text"    placeholder="手机号码" model:value="{{shoujihaoma}}" />
+    </view>
+    <!-- bumen，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">部门</view>
+        <input  class="item-input" type="text"    placeholder="部门" model:value="{{bumen}}" />
+    </view>
+    <!-- gangwei，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">岗位</view>
+        <input  class="item-input" type="text"    placeholder="岗位" model:value="{{gangwei}}" />
+    </view>
+    <!-- qiyezhanghao，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">企业账号</view>
+        <input  class="item-input" type="text"    placeholder="企业账号" model:value="{{qiyezhanghao}}" />
+    </view>
+    <!-- qiyemingcheng，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">企业名称</view>
+        <input  class="item-input" type="text"    placeholder="企业名称" model:value="{{qiyemingcheng}}" />
+    </view>
+    <!-- qiyezhanghao，普,去  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='qiye'}}"  >
+        <view class="item-label">企业账号</view>
+        <input  class="item-input" type="text"    disabled="true" placeholder="企业账号" model:value="{{qiyezhanghao}}" />
+    </view>
+    <!-- qiyemingcheng，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='qiye'}}"  >
+        <view class="item-label">企业名称</view>
+        <input  class="item-input" type="text"    placeholder="企业名称" model:value="{{qiyemingcheng}}" />
+    </view>
+    <view class="item-box" wx:if="{{tableName=='qiye'}}" >
+        <view  class="item-label"   bindtap="qiyetupianTap"  >企业图片</view>
+        <image class="item-img"   bindtap="qiyetupianTap"   src="{{tempPathqiyetupian}}" mode="aspectFill"></image>
+    </view>
+    <!-- lianxidianhua，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='qiye'}}"  >
+        <view class="item-label">联系电话</view>
+        <input  class="item-input" type="text"    placeholder="联系电话" model:value="{{lianxidianhua}}" />
+    </view>
+    <!-- qiyedizhi，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='qiye'}}"  >
+        <view class="item-label">企业地址</view>
+        <input  class="item-input" type="text"    placeholder="企业地址" model:value="{{qiyedizhi}}" />
+    </view>
+    <view class="item-box" wx:if="{{tableName=='qiye'}}">
+        <view class="item-label">注册时间</view>
+        <picker  class="down-item-picker"    mode="date" value="{{zhuceshijian}}"  bindchange="zhuceshijianChange" >
+            <view class="down-item-picker-text">  {{zhuceshijian}}</view>
+        </picker>
+    </view>
+    <!-- yuangongshuliang，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='qiye'}}"  >
+        <view class="item-label">员工数量</view>
+        <input  class="item-input" type="text"    placeholder="员工数量" model:value="{{yuangongshuliang}}" />
+    </view>
+<view class="btn-box">
+    <button class="save-btn" bindtap="saveTap">保存</button>
+    <button class="quite-btn" bindtap="quitTap">退出登录</button>
+
+</view>
+
+</view>
+
+</view>
+</view>

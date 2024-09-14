@@ -1,0 +1,145 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="detail-box">
+
+
+    <!-- ${column.loginUser}, biaoti,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">标题：</view>
+<view class="detail-item-text">{{detailList.biaoti}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qingjiayuanyin,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">请假原因：</view>
+<view class="detail-item-text">{{detailList.qingjiayuanyin}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qingjiatianshu,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">请假天数：</view>
+<view class="detail-item-text">{{detailList.qingjiatianshu}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, kaishishijian,日-->
+<view class="detail-item-box" >
+<view class="detail-item-label">开始时间：</view>
+<view class="detail-item-text">{{detailList.kaishishijian}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">请假类型：</view>
+<view class="detail-item-text">{{detailList.qingjialeixing}}</view>
+</view>
+    <!-- ${column.loginUser}, beizhu,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">备注：</view>
+<view class="detail-item-text">{{detailList.beizhu}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, yuangongzhanghao,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">员工账号：</view>
+<view class="detail-item-text">{{detailList.yuangongzhanghao}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">员工姓名：</view>
+<view class="detail-item-text">{{detailList.yuangongxingming}}</view>
+</view>
+    <!-- ${column.loginUser}, bumen,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">部门：</view>
+<view class="detail-item-text">{{detailList.bumen}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, gangwei,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">岗位：</view>
+<view class="detail-item-text">{{detailList.gangwei}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qiyezhanghao,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">企业账号：</view>
+<view class="detail-item-text">{{detailList.qiyezhanghao}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qiyemingcheng,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">企业名称：</view>
+<view class="detail-item-text">{{detailList.qiyemingcheng}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">申请时间：</view>
+<view class="detail-item-text">{{detailList.addtime}}</view>
+</view>
+
+
+
+
+<view class="detail-item-box">
+<view class="detail-item-label">回复内容</view>
+<view class="detail-item-text">{{detailList.shhf}}</view>
+</view>
+<view  class="detail-item-box">
+<view class="detail-item-label">审核状态：</view>
+<view wx:if="{{detailList.sfsh=='是'}}" class="text" class="detail-item-text">通过</view>
+<view wx:if="{{detailList.sfsh=='否'}}" class="text" class="detail-item-text">不通过</view>
+<view wx:if="{{detailList.sfsh=='待审核'}}" class="text" class="detail-item-text">待审核</view>
+</view>
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+
+    
+
+
+</view>
+
+</view>
+</view>

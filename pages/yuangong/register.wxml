@@ -1,0 +1,41 @@
+<view class="register-container">
+<view class="content">
+<view class="avatar-box">
+<image class="avatar" src="http://codegen.caihongy.cn/20201114/7856ba26477849ea828f481fa2773a95.jpg" mode="aspectFit" />
+</view>
+<view class="box">
+<input type="text" placeholder="员工账号" model:value="{{yuangongzhanghao}}"  />
+</view>
+<view class="box">
+    <input type="password" placeholder="请输入员工密码"     model:value="{{yuangongmima}}" />
+</view>
+<view class="box">
+<input type="password" placeholder="请确认员工密码"     model:value="{{yuangongmima2}}"/>
+</view>
+    <view class="box">
+        <input type="text" placeholder="员工姓名" model:value="{{yuangongxingming}}" />
+    </view>
+<view  class="box"    >头像</view>
+<image class="upload-img"   bindtap="touxiangTap"   src="{{tempPathtouxiang}}" mode="aspectFill"></image>
+<picker mode="selector" range="{{xingbieList}}" value="{{xingbieIndex}}" bindchange="xingbieChange">
+    <input type="text" placeholder="性别"  value="{{xingbieList[xingbieIndex]}}" />
+</picker>
+    <view class="box">
+        <input type="text" placeholder="手机号码" model:value="{{shoujihaoma}}" />
+    </view>
+    <view class="box">
+        <input type="text" placeholder="部门" model:value="{{bumen}}" />
+    </view>
+    <view class="box">
+        <input type="text" placeholder="岗位" model:value="{{gangwei}}" />
+    </view>
+    <view class="box">
+        <input type="text" placeholder="企业账号" model:value="{{qiyezhanghao}}" />
+    </view>
+    <view class="box">
+        <input type="text" placeholder="企业名称" model:value="{{qiyemingcheng}}" />
+    </view>
+    <button class="register-btn" bindtap="register">注册</button>
+
+</view>
+</view>

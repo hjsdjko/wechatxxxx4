@@ -1,0 +1,127 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">员工账号：</view>
+<view class="detail-item-text">{{detailList.yuangongzhanghao}}</view>
+</view>
+    <!-- ${column.loginUser}, yuangongxingming,随-->
+<view class="detail-item-box" >
+<view class="detail-item-label">员工姓名：</view>
+<view class="detail-item-text">{{detailList.yuangongxingming}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, bumen,随-->
+<view class="detail-item-box" >
+<view class="detail-item-label">部门：</view>
+<view class="detail-item-text">{{detailList.bumen}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, gangwei,随-->
+<view class="detail-item-box" >
+<view class="detail-item-label">岗位：</view>
+<view class="detail-item-text">{{detailList.gangwei}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, chuqintianshu,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">出勤天数：</view>
+<view class="detail-item-text">{{detailList.chuqintianshu}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qingjiatianshu,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">请假天数：</view>
+<view class="detail-item-text">{{detailList.qingjiatianshu}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, chidaotianshu,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">迟到天数：</view>
+<view class="detail-item-text">{{detailList.chidaotianshu}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, zaotuicishu,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">早退次数：</view>
+<view class="detail-item-text">{{detailList.zaotuicishu}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, queqintianshu,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">缺勤天数：</view>
+<view class="detail-item-text">{{detailList.queqintianshu}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">统计时间：</view>
+<view class="detail-item-text">{{detailList.addtime}}</view>
+</view>
+    <!-- ${column.loginUser}, qiyezhanghao,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">企业账号：</view>
+<view class="detail-item-text">{{detailList.qiyezhanghao}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qiyemingcheng,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">企业名称：</view>
+<view class="detail-item-text">{{detailList.qiyemingcheng}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+
+    
+
+
+</view>
+
+</view>
+</view>

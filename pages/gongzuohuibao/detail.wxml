@@ -1,0 +1,119 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">员工账号：</view>
+<view class="detail-item-text">{{detailList.yuangongzhanghao}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">员工姓名：</view>
+<view class="detail-item-text">{{detailList.yuangongxingming}}</view>
+</view>
+    <!-- ${column.loginUser}, bumen,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">部门：</view>
+<view class="detail-item-text">{{detailList.bumen}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, gangwei,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">岗位：</view>
+<view class="detail-item-text">{{detailList.gangwei}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qiyezhanghao,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">企业账号：</view>
+<view class="detail-item-text">{{detailList.qiyezhanghao}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qiyemingcheng,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">企业名称：</view>
+<view class="detail-item-text">{{detailList.qiyemingcheng}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, huibaomingcheng,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">汇报名称：</view>
+<view class="detail-item-text">{{detailList.huibaomingcheng}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">日期：</view>
+<view class="detail-item-text">{{detailList.addtime}}</view>
+</view>
+    <!-- ${column.loginUser}, wanchengqingkuang,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">完成情况：</view>
+<view class="detail-item-text">{{detailList.wanchengqingkuang}}</view>
+</view>
+
+
+
+
+
+
+<view  class="detail-item-box">
+<view class="detail-item-label">审核状态：</view>
+<view wx:if="{{detailList.sfsh=='是'}}" class="text" class="detail-item-text">通过</view>
+<view wx:if="{{detailList.sfsh=='否'}}" class="text" class="detail-item-text">不通过</view>
+<view wx:if="{{detailList.sfsh=='待审核'}}" class="text" class="detail-item-text">待审核</view>
+</view>
+<view class="detail-item-box">
+<view class="detail-item-label">回复内容</view>
+<view class="detail-item-text">{{detailList.shhf}}</view>
+</view>
+
+
+
+<view class="textarea-box">
+<view class="textarea-label">汇报内容</view>
+<view class="textarea-text">
+    <rich-text nodes="{{detailList.huibaoneirong}}"></rich-text>
+</view>
+</view>
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+
+    
+
+
+</view>
+
+</view>
+</view>

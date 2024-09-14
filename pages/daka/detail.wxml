@@ -1,0 +1,100 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">员工账号：</view>
+<view class="detail-item-text">{{detailList.yuangongzhanghao}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">员工姓名：</view>
+<view class="detail-item-text">{{detailList.yuangongxingming}}</view>
+</view>
+    <!-- ${column.loginUser}, xingbie,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">性别：</view>
+<view class="detail-item-text">{{detailList.xingbie}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, bumen,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">部门：</view>
+<view class="detail-item-text">{{detailList.bumen}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, gangwei,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">岗位：</view>
+<view class="detail-item-text">{{detailList.gangwei}}</view>
+</view>
+
+
+<view class="detail-detail-img-box">
+<view class="detail-item-label">头像：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.touxiang}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">打卡时间：</view>
+<view class="detail-item-text">{{detailList.addtime}}</view>
+</view>
+    <!-- ${column.loginUser}, dakaleixing,下-->
+<view class="detail-item-box" >
+<view class="detail-item-label">打卡类型：</view>
+<view class="detail-item-text">{{detailList.dakaleixing}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, fulladdress,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">地址：</view>
+<view class="detail-item-text">{{detailList.fulladdress}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+
+    
+
+
+</view>
+
+</view>
+</view>

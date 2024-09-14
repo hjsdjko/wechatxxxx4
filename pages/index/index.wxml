@@ -1,0 +1,155 @@
+<view class="index-container">
+    <view class="content">
+
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{true}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#06988830'   indicator-active-color="#069888"   autoplay="{{true}}"  circular="{{true}}">
+        <swiper-item class="swiper-item"  wx:for="{{swiperList}}" wx:if="{{index<=2}}" wx:key="{{index}}"       >
+            <image src="{{item.img}}" mode="aspectFill"   class="swiper-img"></image>
+            <view   wx:if="true"  class="swiper-title">{{item.title}}</view>
+        </swiper-item>
+    </swiper>
+
+<!-- 菜单栏menu -->
+
+
+        <view wx:if="{{true}}"   class="grid-box">
+
+            <view wx:for="{{frontMenuList}}" wx:key="index" class="grid-box-item">
+                <view wx:if="{{item.child.length >1}}" data-item="{{item}}" bind:tap="selectTap">
+                    <text class="iconfont {{item.fontClass}} grid-icon" />
+                    <text class="item-munu">{{item.menu}}</text>
+                </view>
+
+                <view wx:else="" data-item="{{item}}" bind:tap="menuTap">
+                    <text class="iconfont {{item.fontClass}} grid-icon" />
+                    <text class="item-munu">{{item.menu}}</text>
+                </view>
+
+            </view>
+
+            <com-popup id="bottomFrame" className="buttom-popup">
+                <view bind:tap="cancelShow" style="display: flex;justify-content: flex-end;margin:20rpx 40rpx 0 0;">取消</view>
+                <view data-myitem="{{myitem}}" bind:tap="tomenuTap" wx:for="{{childItem}}" wx:for-item="myitem" wx:for-index="childindex" style="height: 100%;height: 88rpx;margin:20rpx 0;text-align: center;line-height: 88rpx;border-width: 0 0 2rpx 0;border-style: solid;border-color: #eee;" wx:key="{{childindex}}">
+                    {{myitem.menu}}
+                </view>
+
+
+            </com-popup>
+
+
+
+        </view>
+
+
+<!-- 商品推荐 -->
+
+
+
+
+
+<view class="max-list-box">
+
+<view  class="listIdea" >
+<view  class="idea-box1">不后悔过往，不浪费现在</view>
+<view class="idea-box2">满怀梦想，面对未来</view>
+<view  class="idea-box3"></view>
+<view class="idea-box4"></view>
+</view>
+<view class="goods-list-title-box">
+
+<view class="goods-list-title-text">通知公告</view>
+<text bind:tap="checkMoreTap" data-tablename="tongzhigonggao"  class="goods-list-title-more" >更多</text>
+</view>
+
+<!--  样式1,2,3oook-->
+
+<!--  样式444oook-->
+
+<!--  样式5-->
+<view class="list-six" >
+<view  class="list-box">
+    <view class="list-item-top"  catchtap="toDetail"
+          data-tablename="tongzhigonggao"
+          data-item="{{hometongzhigonggaoList[0]}}"   >
+<view  wx:if="{{true}}"  class="list-item-top-title">{{hometongzhigonggaoList[0].biaoti}}</view>
+<image  src="{{hometongzhigonggaoList[0].fengmian}}" mode="aspectFill" class="list-item-top-img"/>
+<view  wx:if="{{true}}"  class="list-item-top-title">发布时间:{{hometongzhigonggaoList[0].fabushijian}}</view>
+    </view>
+    <view class="list-center-box">
+        <view class="list-item-left-box"  catchtap="toDetail"
+              data-tablename="tongzhigonggao"
+              data-item="{{hometongzhigonggaoList[1]}}"   >
+            <view class="list-item-center-left-top">
+<view  wx:if="{{true}}"  class="list-item-center-left-top-title">{{hometongzhigonggaoList[1].biaoti}}</view>
+<image  src="{{hometongzhigonggaoList[1].fengmian}}" mode="aspectFill" class="list-item-center-left-top-img"/>
+<view  wx:if="{{true}}"  class="list-item-center-left-top-title">发布时间:{{hometongzhigonggaoList[1].fabushijian}}</view>
+            </view>
+            <view class="list-item-center-left-bottom" catchtap="toDetail"
+                  data-tablename="tongzhigonggao"
+                  data-item="{{hometongzhigonggaoList[2]}}" >
+                                                            <view  wx:if="{{true}}"  class="list-item-center-left-bottom-title">{{hometongzhigonggaoList[2].biaoti}}</view>
+                                                                                <image  src="{{hometongzhigonggaoList[2].fengmian}}" mode="aspectFill" class="list-item-center-left-bottom-img"/>
+                                                                                                                    <view  wx:if="{{true}}"  class="list-item-center-left-bottom-title">发布时间:{{hometongzhigonggaoList[2].fabushijian}}</view>
+                                                </view>
+
+        </view>
+        <view class="list-item-right-box" >
+            <view  class="list-item-right-top" catchtap="toDetail"
+                   data-tablename="tongzhigonggao"
+                   data-item="{{hometongzhigonggaoList[3]}}"   >
+                                                            <view  wx:if="{{true}}"  class="list-item-right-top-title">{{hometongzhigonggaoList[3].biaoti}}</view>
+                                                                                <image  src="{{hometongzhigonggaoList[3].fengmian}}" mode="aspectFill" class="list-item-right-top-img"/>
+                                                                                                                    <view  wx:if="{{true}}"  class="list-item-right-top-title">发布时间:{{hometongzhigonggaoList[3].fabushijian}}</view>
+                                    
+            </view>
+            <view  class="list-item-right-bottom" catchtap="toDetail"
+                   data-tablename="tongzhigonggao"
+                   data-item="{{hometongzhigonggaoList[4]}}"   >
+                                                            <view  wx:if="{{true}}"  class="list-item-right-bottom-title">{{hometongzhigonggaoList[4].biaoti}}</view>
+                                                                                <image  src="{{hometongzhigonggaoList[4].fengmian}}" mode="aspectFill" class="list-item-right-bottom-img"/>
+                                                                                                                    <view  wx:if="{{true}}"  class="list-item-right-bottom-title">发布时间:{{hometongzhigonggaoList[4].fabushijian}}</view>
+                                    
+            </view>
+        </view>
+    </view>
+
+        <view class="list-item-bottom-box"  catchtap="toDetail"
+          data-tablename="tongzhigonggao"
+          data-item="{{hometongzhigonggaoList[5]}}"   >
+<view  wx:if="{{true}}"  class="list-item-bottom-title">通知公告：{{hometongzhigonggaoList[5].biaoti}}</view>
+<image  src="{{hometongzhigonggaoList[5].fengmian}}" mode="aspectFill" class="list-item-bottom-img"/>
+    </view>
+</view>
+
+</view>
+<!--  样式7ok-->
+<!--  样式8OK-->
+<!--  默认样式9ok-->
+
+</view>
+
+
+
+
+
+
+
+
+    <!-- 系统简介 -->
+<view class='system-box'>
+<view class='system-title'>{{systemIntroductionDetail.title}}</view>
+<view class='system-subhead'>{{systemIntroductionDetail.subtitle}}</view>
+<view class='system-img-box'>
+    <image class='system-img-img1' mode="aspectFill" wx:if="{{systemIntroductionDetail.picture1}}" src="{{baseURL+systemIntroductionDetail.picture1}}" />
+    <image class='system-img-img2' mode="aspectFill" wx:if="{{systemIntroductionDetail.picture2}}" src="{{baseURL+systemIntroductionDetail.picture2}}" />
+    <image class='system-img-img3' mode="aspectFill" wx:if="{{systemIntroductionDetail.picture3}}" src="{{baseURL+systemIntroductionDetail.picture3}}" />
+</view>
+<rich-text class='system-desc' nodes="{{systemIntroductionDetail.content}}" />
+<view class='system-box1' />
+<view class='system-box2' />
+</view>
+
+
+
+
+    </view>
+</view>

@@ -1,0 +1,89 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+
+
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#06988830'   indicator-active-color="#069888"   autoplay="{{true}}"  circular="{{true}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"   wx:key="{{index}}">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+
+
+
+
+
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">企业名称：</view>
+<view class="detail-item-text">{{detailList.qiyemingcheng}}</view>
+</view>
+<view class="detail-detail-img-box">
+<view class="detail-item-label">企业图片：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.qiyetupian}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">联系电话：</view>
+<view class="detail-item-text">{{detailList.lianxidianhua}}</view>
+</view>
+    <!-- ${column.loginUser}, qiyedizhi,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">企业地址：</view>
+<view class="detail-item-text">{{detailList.qiyedizhi}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, zhuceshijian,日-->
+<view class="detail-item-box" >
+<view class="detail-item-label">注册时间：</view>
+<view class="detail-item-text">{{detailList.zhuceshijian}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, yuangongshuliang,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">员工数量：</view>
+<view class="detail-item-text">{{detailList.yuangongshuliang}}</view>
+</view>
+
+
+
+
+
+
+<view class="detail-item-box">
+<view class="detail-item-label">企业简介</view>
+<view class="detail-item-text">{{detailList.qiyejianjie}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+
+    
+
+
+</view>
+
+</view>
+</view>

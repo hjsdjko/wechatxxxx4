@@ -1,0 +1,106 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+
+
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#06988830'   indicator-active-color="#069888"   autoplay="{{true}}"  circular="{{true}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"   wx:key="{{index}}">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+
+
+
+
+
+
+<view class="detail-box">
+
+
+    <!-- ${column.loginUser}, yuangongxingming,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">员工姓名：</view>
+<view class="detail-item-text">{{detailList.yuangongxingming}}</view>
+</view>
+
+
+<view class="detail-detail-img-box">
+<view class="detail-item-label">头像：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.touxiang}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+    <!-- ${column.loginUser}, xingbie,下-->
+<view class="detail-item-box" >
+<view class="detail-item-label">性别：</view>
+<view class="detail-item-text">{{detailList.xingbie}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, shoujihaoma,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">手机号码：</view>
+<view class="detail-item-text">{{detailList.shoujihaoma}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, bumen,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">部门：</view>
+<view class="detail-item-text">{{detailList.bumen}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, gangwei,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">岗位：</view>
+<view class="detail-item-text">{{detailList.gangwei}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qiyezhanghao,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">企业账号：</view>
+<view class="detail-item-text">{{detailList.qiyezhanghao}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, qiyemingcheng,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">企业名称：</view>
+<view class="detail-item-text">{{detailList.qiyemingcheng}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+
+    
+
+
+</view>
+
+</view>
+</view>

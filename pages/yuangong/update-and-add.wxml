@@ -1,0 +1,126 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+    <view class="item-box">
+        <view class="item-label">员工账号</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yuangongzhanghao==true}}"  placeholder="员工账号" model:value="{{yuangongzhanghao}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">员工密码</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yuangongmima==true}}"  placeholder="员工密码" model:value="{{yuangongmima}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">员工姓名</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yuangongxingming==true}}"  placeholder="员工姓名" model:value="{{yuangongxingming}}" />
+    </view>
+
+<view class="item-box"    bindtap="uploadtouxiang">
+    <view   class="item-label">头像</view>
+    <image  src="{{touxiangPath?touxiangPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+<view class="item-box">
+    <view class="item-label" >性别</view>
+    <picker   class="down-item-picker"     bindchange="xingbieChange" value="{{xingbieIndex}}"  range="{{xingbieList}}">
+                <view class="down-item-picker-text">
+                    {{xingbieIndex||xingbieIndex==0?xingbieList[xingbieIndex]:"请选择性别"}}
+                </view>
+    </picker>
+</view>
+    <view class="item-box">
+        <view class="item-label">手机号码</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.shoujihaoma==true}}"  placeholder="手机号码" model:value="{{shoujihaoma}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">部门</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.bumen==true}}"  placeholder="部门" model:value="{{bumen}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">岗位</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.gangwei==true}}"  placeholder="岗位" model:value="{{gangwei}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">企业账号</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qiyezhanghao==true}}"  placeholder="企业账号" model:value="{{qiyezhanghao}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">企业名称</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qiyemingcheng==true}}"  placeholder="企业名称" model:value="{{qiyemingcheng}}" />
+    </view>
+
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>
